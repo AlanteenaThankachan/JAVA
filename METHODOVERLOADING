@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Area
+{
+
+	void display(double radius)
+	{
+	double c=3.14*radius*radius;
+	System.out.println("Area of the Circle="+c);
+	}
+	void display(int Length,int Width)
+	{
+	int R=Length*Width;
+	System.out.println("Area of the Rectangle="+R);
+	}
+    void display(double length,double breadth)
+    {
+    double t=0.5*length*breadth;
+    System.out.println("Area of the Triangle="+t);
+    }
+}
+public class methodoverloading
+{
+		public static void main(String[]args)
+		{
+			Scanner sc=new Scanner(System.in);
+			Area A=new Area();	
+			System.out.println("Enter the Radius of the Circle=");
+			double radius=sc.nextDouble();
+			A.display(radius);
+			System.out.println("Enter the length of the Rectangle=");
+			int Length=sc.nextInt();
+			System.out.println("Enter the width of the Rectangle=");
+			int Width=sc.nextInt();
+			A.display(Length,Width);
+			System.out.println("Enter the length of the triangle=");
+			double length=sc.nextDouble();
+			System.out.println("Enter the breadth of the triangle=");
+			double breadth=sc.nextDouble();
+			A.display(length,breadth);
+			sc.close();  
+		}
+}
