@@ -1,0 +1,72 @@
+import java.util.Scanner;
+public class Employee
+{
+	String Name;
+	int Age;
+	int Phonenumber;
+	String Address;
+	float Salary;
+	Employee(String Name1,int Age1,int Phonenumber1,String Address1,float Salary1)
+	{
+		Name=Name1;
+		Age=Age1;
+		Phonenumber=Phonenumber1;
+		Address=Address1;
+		Salary=Salary1;
+	}
+	void printEmployee()
+	{
+		System.out.println("Name"+Name);
+		System.out.println("Age="+Age);
+		System.out.println("PhoneNumber="+Phonenumber);
+		System.out.println("Address="+Address);
+	}
+	void printSalary()
+	{
+	System.out.println("Salary="+Salary);
+	}
+	class officer extends Employee
+	{
+		String Specialization;
+		officer(String Name1,int Age1,int Phonenumber1,String Address1,float Salary1,String Specialization1)
+		{
+		super(Name1,Age1,Phonenumber1,Address1,Salary1);
+		Specialization=Specialization1;
+	}
+	void printSpecialization()
+	{
+		System.out.println("Specialization="+Specialization);
+	}
+    class Manager extends officer
+    {
+    	Manager(String Name1,int Age1,int Phonenumber1,String Address1,float Salary1,String Specialization1)
+    	{
+    	super(Name1,Age1,Phonenumber1,Address1,Salary1);
+    	department=department1;	
+    }
+    void printdepartment()
+    {
+    	System.out.println("Department="+department);
+    }
+    public class Inheritance
+    {
+    	public static void main(String[]args);
+    	{
+    		Scanner sc=new Scanner(System.in);
+    		int age;
+    		String Name,Address,Specialization,department;
+    		System.out.println("Enter the details ");
+    		System.out.print("Enter the name= ");
+    		Name sc=nextString();
+    		System.out.println("Enter the age= ");
+    		Age sc=nextInt();
+    		System.out.println("Enter the Phonenumber= ");
+    		Phonenumber sc=nextInt();
+    		System.out.println("Enter the Address= ");
+    		Address sc=nextString();
+    		System.out.println("Enter the Salary= ");
+    		Salary sc=nextfloat();
+    		System.out.println("Enter the Department=");
+    		department sc=nextdepartment();	
+    	}
+    }
