@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class matrix 
+{
+	public static void main (String[]args)
+	  {
+		  Scanner sc=new Scanner(System.in);
+		  System.out.println("Enter the order-r1=");
+		  int r1=sc.nextInt();
+		  System.out.println("Enter the order-c1=");
+		  int c1=sc.nextInt();
+		  System.out.println("Enter the order-r2=");
+		  int r2=sc.nextInt();
+		  System.out.println("Enter the order-c2=");
+		  int c2=sc.nextInt();
+		  if(c1!=r2)
+		  {
+			System.out.println("Matrix Multiplication is not possible");
+			return;
+		  }
+		  int i,j,k;
+		  int A[][]=new int[r1][c1];
+		  int B[][]=new int[r2][c2];
+		  int c[][]=new int[r1][c2];
+		  System.out.println("Read Matrix A");
+		  for ( i=0;i<r1;i++)
+		  {
+			  for (j=0;j<c1;j++) {
+		      System.out.println("A["+1+"]["+j+"]=");
+			  A[i][j]=sc.nextInt();
+		  }}
+		  System.out.println("Read Matrix B");
+		  for ( i=0;i<r2;i++)
+		  {
+			  for ( j=0;j<c2;j++) {
+		      System.out.println("B["+1+"]["+j+"]=");
+			  B[i][j]=sc.nextInt();
+		  }}
+		  for (i=0;i<r1;i++)
+		  {
+			  for (j=0;j<c2;j++)
+			  {
+				  c[i][j]=0;
+			     for(k=0;k<c1;k++)
+				  {
+					  c[i][j]+=A[i][j]*B[i][j];
+				  }
+			  }
+		  }
+		  
+		  //System.out.println();
+		  System.out.println("Product is ");
+		  for(i=0;i<r1;i++)
+		  {
+			  for(j=0;j<c2;j++) {
+				 System.out.print(c[i][j]+"\t");
+		  }
+		  System.out.println();
+	  }}}
